@@ -6,6 +6,7 @@ spring:
 ---
 
 spring:
+  profiles: dev
   datasource:
     username: root
     password: root
@@ -13,14 +14,14 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
   application:
     name: staff-server
-  profiles: dev
+
 
 
 server:
   port: 8001
 
-mybatis:
-  type-aliases-package: com.bw.cloud.bean
+#mybatis:
+#  type-aliases-package: com.bw.cloud.bean
   mapper-locations: classpath:mybatis/mapper/**/*.xml
 
 eureka:
