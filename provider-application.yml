@@ -1,0 +1,26 @@
+
+
+spring:
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/x5?useSSL=false&useUnicode=true&characterEncoding=UTF-8
+    driver-class-name: com.mysql.jdbc.Driver
+  application:
+    name: staff-server
+
+
+server:
+  port: 8001
+
+mybatis:
+  type-aliases-package: com.bw.cloud.bean
+  mapper-locations: classpath:mybatis/mapper/**/*.xml
+
+eureka:
+  client:
+    service-url:
+      defaultZone:  http://localhost:8761/eureka/   #注册地址
+  instance:
+    instance-id: staff-server
+    prefer-ip-address: true
