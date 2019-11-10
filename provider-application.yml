@@ -8,6 +8,7 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
   application:
     name: staff-server
+  profiles: dev
 
 
 server:
